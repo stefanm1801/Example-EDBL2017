@@ -1,0 +1,130 @@
+<div class="card-pf card-pf-accented card-pf-aggregate-status row">
+    <div class="card-pf-body">
+        <div class="col-md-4">
+            <div class="section-widget">
+                <h3 class="section-widget-title">Speed</h3>
+                <div class="status-legend">
+                    <span>Average: ~5</span>
+                    <span>High: >10</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pie-wrapper">
+                            <div class="arc" data-value="{{speedPercentage}}"></div>
+                            <span class="score">{{speedValue}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-widget">
+                <h3 class="section-widget-title">Temperature</h3>
+                <div class="status-legend">
+                    <span>Average: ~20</span>
+                    <span>High: >30</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pie-wrapper">
+                            <div class="arc" data-value="{{temperaturePercentage}}"></div>
+                            <span class="score">{{temperatureValue}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-widget">
+                <h3 class="section-widget-title">Distance</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pie-wrapper">
+                            <div class="arc" data-value="{{distancePercentage}}"></div>
+                            <span class="score">{{distanceValue}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="section-widget">
+                <h3 class="section-widget-title">Engine status</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-info status-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    Current status
+                                    <span ng-if="engineStatus === 0">Stopped</span>
+                                    <span ng-if="engineStatus === 1">Started</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <a ng-click="turnOffEngine()" class="btn btn-lg btn-block btn-danger btn-action">
+                            <span class="glyphicon glyphicon-off"></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <a ng-click="goAhead()" class="btn btn-lg btn-block btn-success btn-action">
+                            <span class="glyphicon glyphicon-arrow-up"></span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a ng-click="goBack()"class="btn btn-lg btn-block btn-success btn-action">
+                            <span class="glyphicon glyphicon-arrow-down"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-widget">
+                <h3 class="section-widget-title">Platform direction</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-info status-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    Current direction
+                                    <span ng-show="platformDirection === 0">Stopped</span>
+                                    <span ng-show="platformDirection === 1">Left</span>
+                                    <span ng-show="platformDirection === 2">Right</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <a ng-click="rotatePlatformLeft()" class="btn btn-lg btn-block btn-success btn-action">
+                            <span class="glyphicon glyphicon-arrow-left"></span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a ng-click="rotatePlatformRight()"  class="btn btn-lg btn-block btn-success btn-action">
+                            <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="section-widget card-style">
+                <h3 class="section-widget-title">Position</h3>
+                <a class="arrow" ng-class='{"up": moveForward}'></a>
+                <img src="img/Pctr1_EDIT2017.png" alt="Edit 2017" id="AnimaPic"/>
+                <img src="img/Pctr2_EDIT2017.png" alt="Edit 2017" id="AnimaPic1"/>
+                <a class="arrow" ng-class='{"down": moveBack}'></a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="section-widget">
+                <h3 class="section-widget-title">Position of crane</h3>
+               <!--<img src="img/Pctr3_EDIT2017.png" alt="Edit 2017" id="AnimaPic2"/>-->
+            </div>
+        </div>
+    </div>
+</div>

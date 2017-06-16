@@ -1,0 +1,17 @@
+<div class="card-pf card-pf-accented card-pf-aggregate-status row" ng-controller="DashboardController as dashboardController" ng-init="init()">
+    <div class="card-pf-body">
+        <div class="col-md-12 chart-item" ng-if="lightConfig.data">
+            <div pf-c3-chart id="lights-chart" config="lightConfig" get-chart-callback="getLigthChart"></div>
+        </div>
+        
+        <div class="col-md-12 chart-item" ng-if="temperatureData.dataAvailable">
+            <div pf-trends-chart config="temperatureConfig" chart-data="temperatureData"
+                 show-x-axis="temperatureChartShowX" show-y-axis="temperatureChartShowY" chart-height="temperatureChartHeight" ></div>
+        </div>
+        
+        <div class="col-md-12 chart-item" ng-if="humidityData.dataAvailable">
+            <div pf-trends-chart config="humidityConfig" chart-data="humidityData"
+                 show-x-axis="humidityChartShowX" show-y-axis="humidityChartShowY" chart-height="humidityChartHeight" ></div>
+        </div>
+    </div>
+</div>

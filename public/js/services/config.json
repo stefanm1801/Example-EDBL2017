@@ -1,0 +1,12 @@
+{
+    "user": {
+        "username": "Comtrade_mario",
+        "password": "KeepCalm123#",
+        "basic" : "Basic "
+    },
+    "server": {
+        "baseUrl": "10.89.40.4",
+        "port": 8081,
+        "authAction": "/v1/authentication/user"
+    }
+}

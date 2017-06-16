@@ -1,0 +1,155 @@
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+@media (min-width: 768px) {
+    .login-pf .container {
+        top: 30%;
+        bottom: auto;
+    }
+}
+
+.login-pf .container .submit {
+    float: right;
+    text-align: right;
+}
+
+.login-page-container .has-error {
+    border: 2px solid red;
+}
+
+.card-pf.card-pf-accented.card-pf-aggregate-status {
+    top: 40px;
+    position: relative;
+}
+
+.chart-item {
+    margin-bottom: 50px;
+}
+
+.card-pf {
+    background: transparent;
+    border-top: none;
+}
+
+.section-widget {
+    /*background: rgba(140, 128, 128, 0.47);*/
+    position: relative;
+    background: rgba(27, 22, 22, 0.47);
+    padding: 0 20px 10px 20px;
+    border-radius: 4px;
+}
+
+.btn-action {
+    padding: 15px;
+    font-size: 45px;
+}
+
+.btn-action .glyphicon {
+    vertical-align: middle;
+    top: 0;
+}
+
+.section-widget-title {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 0 5px 0;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.section-widget .panel-heading {
+    padding: 24px 15px;
+}
+
+.section-widget .panel-title {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.status-panel span {
+    font-size: 180%;
+    margin-top: 10px;
+    display: block;
+    font-weight: 900;
+}
+
+.card-pf.card-pf-aggregate-status {
+    padding-bottom: 25px;
+}
+
+.status-legend {
+    position: absolute;
+    right: 0px;
+    top: 25%;
+    width: 70px;
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.5;
+}
+
+/*Part for pissition of tracked */
+.card-style{
+    min-height: 400px;
+}
+.card-style > #AnimaPic{
+    width: 118px;
+    z-index: 100;
+    position: absolute;
+}
+.card-style > #AnimaPic1
+/*,.card-style > #AnimaPic2*/
+{
+    width: 118px;
+    z-index: 1;
+    position: relative;
+    top: 120px;
+    right: 13px;
+}
+
+@-webkit-keyframes uparrow {
+  0% { -webkit-transform: translateY(0); opacity: 0.4 }
+  100% { -webkit-transform: translateY(-0.4em); opacity: 0.9 }
+}
+@-webkit-keyframes downarrow {
+  0% { -webkit-transform: translateY(0); opacity: 0.4 }
+  100% { -webkit-transform: translateY(0.4em); opacity: 0.9 }
+}
+.arrow {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 2em;
+    display: block;
+    height: 0;
+    margin: 1em auto;
+    opacity: 0.4; 
+    text-indent: -9999px;
+    cursor: default;
+    width: 0;
+}
+.up {
+     -webkit-animation: uparrow 0.6s infinite alternate ease-in-out;
+    border-bottom: 2em solid #004960;
+    position: absolute;
+    z-index: 120;
+    top: 24px;
+    right: 255px;
+}
+.down {
+    -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+    border-top: 2em solid #004960;
+    position: absolute;
+    z-index: 120;
+    bottom: 0px;
+    left: 224px;
+}
+
+#AnimaPic{
+
+}

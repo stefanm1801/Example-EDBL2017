@@ -1,0 +1,37 @@
+<span id="badge">
+    <img src="img/logo.png" alt="Edit 2017"/>
+</span>
+<div class="container login-page-container" ng-controller="LoginController as loginController">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="brand">
+                <img src="patternfly/dist/img/brand.svg" alt="PatternFly Enterprise Application">
+            </div><!--/#brand-->
+        </div><!--/.col-*-->
+        <div class="col-sm-7 col-md-6 col-lg-5 login">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="inputUsername" class="col-sm-2 col-md-2 control-label">Username</label>
+                    <div class="col-sm-10 col-md-10">
+                        <input type="text" class="form-control" id="inputUsername" placeholder="" tabindex="1" ng-model="item.username" ng-class='{"has-error": loginController.$scope.hasError}'>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 col-md-2 control-label">Password</label>
+                    <div class="col-sm-10 col-md-10">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="" tabindex="2" ng-model="item.password" ng-class='{"has-error": loginController.$scope.hasError}'>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-4 col-sm-4 col-md-4 submit">
+                        <button class="btn btn-primary btn-lg" tabindex="4" ng-click="signIn()">Log In</button>
+                    </div>
+                </div>
+            </form>
+        </div><!--/.col-*-->
+        <div class="col-sm-5 col-md-6 col-lg-7 details">
+            <p><strong>Welcome to PatternFly | open interface project!</strong>
+                This is placeholder text, only. Use this area to place any information or introductory message about your application that may be relevant for users. For example, you might include news or information about the latest release of your product here&mdash;such as a version number.</p>
+        </div><!--/.col-*-->
+    </div><!--/.row-->
+</div><!--/.container-->

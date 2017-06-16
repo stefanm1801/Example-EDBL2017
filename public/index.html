@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MainController as mainController" ng-class='{"login-pf": mainController.$scope.htmlClass}'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+
+    <title>Edit 2017</title>
+
+    <!-- Angular-PatternFly Styles -->
+    <link rel="stylesheet" href="angular-patternfly/dist/styles/angular-patternfly.min.css" />
+
+    <!-- jQuery -->
+    <script src="patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap  -->
+    <script src="patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Charts -->
+    <script src="patternfly/node_modules/c3/c3.min.js"></script>
+    <script src="patternfly/node_modules/d3/d3.min.js"></script>
+
+    <!-- PatternFly  -->
+    <script src="patternfly/dist/js/patternfly.min.js"></script>
+
+    <link href="patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+    <link href="patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
+
+    <!-- Angular -->
+    <script src="angular-patternfly/node_modules/angular/angular.min.js"></script>
+    <script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- Angular Base64 -->
+    <script src="angular-base64/angular-base64.min.js"></script>
+
+    <!-- Angular-Bootstrap -->
+    <script src="angular-patternfly/node_modules/angular-ui-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="angular-patternfly/node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- Angular-Sanitize -->
+    <script src="angular-patternfly/node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <!-- Angular-PatternFly  -->
+    <script src="angular-patternfly/dist/angular-patternfly.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/circle-chart.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <div ng-class='{"hidden": mainController.$scope.htmlClass === true}' id="verticalNavWithRouterLayout" class="layout-pf layout-pf-fixed faux-layout">
+        <div pf-vertical-navigation items="navigationItems" brand-alt="COMTRADE - Edit 2017" show-badges="true" pinnable-menus="true"
+            update-active-items-on-click="true" navigate-callback="handleNavigateClick">
+            <div>
+                <ul class="nav navbar-nav navbar-right navbar-iconic">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span title="Username" class="fa pficon-user"></span>
+                                <span class="caret"></span>
+                            </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" ng-controller="LoginController as loginController">
+                            <li><a ng-click="loginController.$scope.signOut()">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="contentContainer" class="container-fluid container-cards-pf container-pf-nav-pf-vertical example-page-container">
+            <ui-view>
+                <!--Authenticated users content-->
+            </ui-view>
+        </div>
+    </div>
+
+    <div ng-if="mainController.$scope.htmlClass === true" ng-include="'views/login.html'"></div>
+
+    <!-- Custom JS -->
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/services/apiWrapperService.js"></script>
+    <script type="text/javascript" src="js/controllers/MainController.js"></script>
+    <script type="text/javascript" src="js/services/UserService.js"></script>
+    <script type="text/javascript" src="js/controllers/LoginController.js"></script>
+    <script type="text/javascript" src="js/services/DashboardService.js"></script>
+    <script type="text/javascript" src="js/controllers/DashboardController.js"></script>
+    <script type="text/javascript" src="js/services/ControlsService.js"></script>
+    <script type="text/javascript" src="js/controllers/ControlsController.js"></script>
+</body>
+
+</html>
